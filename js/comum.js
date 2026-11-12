@@ -46,6 +46,28 @@ window.favoritos = {
     }
 };
 
+// Botão de favorito (coração) de um alojamento
+window.botaoFavorito = function (id) {
+    const coracao = document.createElement("button");
+    coracao.type = "button";
+    coracao.className = "group/fav absolute right-4 top-4 flex size-11 items-center justify-center rounded-full bg-white/90 text-[#14245d] shadow-md transition hover:scale-110 aria-pressed:text-[#c0392b]";
+    coracao.innerHTML = window.icone("coracao", "size-6");
+
+    function atualizarCoracao() {
+        const guardado = window.favoritos.tem(id);
+        coracao.setAttribute("aria-pressed", guardado);
+        coracao.setAttribute("aria-label", guardado ? "Remover dos favoritos" : "Guardar nos favoritos");
+    }
+
+    coracao.addEventListener("click", function () {
+        window.favoritos.alternar(id);
+        atualizarCoracao();
+    });
+
+    atualizarCoracao();
+    return coracao;
+};
+
 // Cartão de alojamento
 
 window.cartaoAlojamento = function (prefixo, alojamento) {
@@ -73,23 +95,8 @@ window.cartaoAlojamento = function (prefixo, alojamento) {
 
     caixaImagem.appendChild(imagem);
 
-    // Botão de favorito por cima da fotografia    
-    const coracao = criar("button", "group/fav absolute right-4 top-4 flex size-11 items-center justify-center rounded-full bg-white/90 text-[#14245d] shadow-md transition hover:scale-110 aria-pressed:text-[#c0392b]");
-    coracao.type = "button";
-    coracao.innerHTML = window.icone("coracao", "size-6");
-    function atualizarCoracao() {
-        const guardado = window.favoritos.tem(alojamento.id);
-        coracao.setAttribute("aria-pressed", guardado);
-        coracao.setAttribute("aria-label", guardado ? "Remover dos favoritos" : "Guardar nos favoritos");
-    }
-
-    coracao.addEventListener("click", function () {
-        window.favoritos.alternar(alojamento.id);
-        atualizarCoracao();
-    });
-
-    atualizarCoracao();
-    caixaImagem.appendChild(coracao);
+    // Botão de favorito por cima da fotografia
+    caixaImagem.appendChild(window.botaoFavorito(alojamento.id));
 
     // Informações
     const info = criar("div", prefixo + "-info flex grow flex-col px-6 pb-7 pt-6");

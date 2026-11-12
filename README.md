@@ -109,24 +109,43 @@ Os esquemas da Entrega 1 foram feitos no [draw.io](https://app.diagrams.net) e e
 
 ### Como abrir
 
-É preciso ter o PHP instalado, com as extensões `pdo_sqlite`, `sqlite3`, `mbstring` e `openssl` ativas no `php.ini`.
+**Duplo clique no `index.html`:** abre o website sem precisar de instalar nada. As páginas estáticas aparecem completas: Início, Nazaré, A Experiência, Contactos e as páginas dos 3 alojamentos em destaque. A página Alojamentos mostra esses 3 alojamentos, com filtro e favoritos.
 
-Na pasta do projeto:
+**Com servidor PHP (opcional, para as funcionalidades com base de dados):** com o PHP instalado e as extensões `pdo_sqlite`, `sqlite3` e `mbstring` ativas, correr na pasta do projeto:
 
 ```
 php -S localhost:8000
 ```
 
-Depois abrir http://localhost:8000 no browser.
-
+Depois abrir http://localhost:8000. Assim aparecem todos os alojamentos, as avaliações e as reservas.
 
 ### Organização das pastas
 
 ```
-projeto-web-php/
+projeto-web/
 ├── index.html                       Início
 ├── alojamentos.html                 Alojamentos
-├── detalhes.html                    Detalhes de um alojamento
+├── detalhes.html                    Detalhes de um alojamento (com PHP)
 ├── espacos-comuns-millennium.html   Espaços comuns
 ├── experiencia.html                 A Experiência
-├── nazare.html
+├── nazare.html                      Nazaré
+├── avaliacoes.html                  Avaliações
+├── contactos.html                   Contactos
+├── reservar.html                    Reservar
+├── admin.html                       Administração
+├── icones.css                       ícones (Iconify)
+├── tailwind.css                     só para as sugestões do Tailwind no VS Code
+├── reservas.db                      base de dados SQLite
+├── alojamentos-em-destaque/         páginas estáticas dos 3 alojamentos em destaque
+├── js/                              JavaScript de cada página
+├── api/                             ficheiros PHP (base de dados, reservas, e-mails)
+├── imagens/                         fotografias, logótipo e alojamentos
+└── esquemas/                        esquemas da Entrega 1
+```
+
+## Referências
+
+| Website | O que se aproveitou |
+|---|---|
+| [Passalacqua](https://www.passalacqua.it/en/) | Estilo elegante: fotografias grandes, letra serifada nos títulos e muito espaço em branco. |
+| [Apartamentos 7 Saias](https://apartamentos7saias.com/) | Website atual do alojamento: informações, regras da casa, contactos e fotografias. |

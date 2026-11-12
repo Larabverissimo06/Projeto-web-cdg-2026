@@ -52,7 +52,7 @@
   <main>
 
     <!-- Topo da página -->
-    <section class="relative flex min-h-[420px] items-center justify-center bg-[url('imagens//geral/imagem_alojamentos.jpg')] bg-cover bg-center px-6 pb-12 pt-32 text-center text-white md:h-[430px] md:min-h-0">
+    <section class="relative flex min-h-[420px] items-center justify-center bg-[url('imagens/geral/imagem_alojamentos.jpg')] bg-cover bg-center px-6 pb-12 pt-32 text-center text-white md:h-[430px] md:min-h-0">
       <div class="absolute inset-0 bg-black/40"></div>
       <div class="relative max-w-3xl">
         <p class="mb-5 text-[11px] tracking-[0.3em]" data-idiomas="aloj.kicker">APARTAMENTOS 7 SAIAS</p>
@@ -79,7 +79,59 @@
       </div>
 
       <!-- Alojamentos -->
-      <div id="alojamentos-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+      <!-- Cartões fixos: aparecem sem servidor; com o PHP, o js/alojamentos.js mostra todos os alojamentos -->
+      <div id="alojamentos-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article data-id="70" data-tipologia="T2" class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="h-64 overflow-hidden md:h-72">
+            <img src="imagens/alojamentos/t2/t2_dra_ines/1.png" alt="T2 – Dra. Inês" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="flex grow flex-col px-6 pb-7 pt-6">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <h3 class="min-w-0 font-['Georgia',serif] text-2xl leading-snug text-[#14245d]">T2 – Dra. Inês</h3>
+              <span class="shrink-0 rounded-full bg-[#f2efe9] px-3 py-1.5 text-xs text-[#14245d]">T2</span>
+            </div>
+            <div class="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-[#666]">
+              <span class="inline-flex items-center gap-2"><span class="icone icone-hospedes size-[18px] text-[#14245d]"></span>5 hóspedes</span>
+              <span class="inline-flex items-center gap-2"><span class="icone icone-quartos size-[18px] text-[#14245d]"></span>2 quartos</span>
+            </div>
+            <a href="alojamentos-em-destaque/t2-dra-ines.html" class="mt-auto inline-flex w-fit items-center gap-2 border-b border-[#14245d] pb-1 text-xs tracking-wider text-[#14245d] transition-all hover:gap-3.5 hover:border-[#b49468] hover:text-[#b49468]">VER DETALHES<span class="icone icone-seta size-4"></span></a>
+          </div>
+        </article>
+
+        <article data-id="42" data-tipologia="Quarto" class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="h-64 overflow-hidden md:h-72">
+            <img src="imagens/alojamentos/quartos/quarto_1_1andar/1.png" alt="Quarto 1 – 1.º andar" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="flex grow flex-col px-6 pb-7 pt-6">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <h3 class="min-w-0 font-['Georgia',serif] text-2xl leading-snug text-[#14245d]">Quarto 1 – 1.º andar</h3>
+              <span class="shrink-0 rounded-full bg-[#f2efe9] px-3 py-1.5 text-xs text-[#14245d]">Quarto</span>
+            </div>
+            <div class="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-[#666]">
+              <span class="inline-flex items-center gap-2"><span class="icone icone-hospedes size-[18px] text-[#14245d]"></span>2 hóspedes</span>
+              <span class="inline-flex items-center gap-2"><span class="icone icone-quartos size-[18px] text-[#14245d]"></span>1 quarto</span>
+            </div>
+            <a href="alojamentos-em-destaque/quarto-1.html" class="mt-auto inline-flex w-fit items-center gap-2 border-b border-[#14245d] pb-1 text-xs tracking-wider text-[#14245d] transition-all hover:gap-3.5 hover:border-[#b49468] hover:text-[#b49468]">VER DETALHES<span class="icone icone-seta size-4"></span></a>
+          </div>
+        </article>
+
+        <article data-id="66" data-tipologia="T2" class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="h-64 overflow-hidden md:h-72">
+            <img src="imagens/alojamentos/t2/t2_2andar_frente_mar/1.jpg" alt="T2 – 2.º andar frente mar" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="flex grow flex-col px-6 pb-7 pt-6">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <h3 class="min-w-0 font-['Georgia',serif] text-2xl leading-snug text-[#14245d]">T2 – 2.º andar frente mar</h3>
+              <span class="shrink-0 rounded-full bg-[#f2efe9] px-3 py-1.5 text-xs text-[#14245d]">T2</span>
+            </div>
+            <div class="mb-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-[#666]">
+              <span class="inline-flex items-center gap-2"><span class="icone icone-hospedes size-[18px] text-[#14245d]"></span>4 hóspedes</span>
+              <span class="inline-flex items-center gap-2"><span class="icone icone-quartos size-[18px] text-[#14245d]"></span>2 quartos</span>
+            </div>
+            <a href="alojamentos-em-destaque/t2-frente-mar.html" class="mt-auto inline-flex w-fit items-center gap-2 border-b border-[#14245d] pb-1 text-xs tracking-wider text-[#14245d] transition-all hover:gap-3.5 hover:border-[#b49468] hover:text-[#b49468]">VER DETALHES<span class="icone icone-seta size-4"></span></a>
+          </div>
+        </article>
+      </div>
       <p id="mensagem-lista" class="py-10 text-center text-[#666]" hidden></p>
     </section>
 

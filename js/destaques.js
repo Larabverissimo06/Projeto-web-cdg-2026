@@ -5,7 +5,17 @@
 
   const idsDestaque = [70, 42, 66];
 
+  // Coração dos favoritos nos cartões fixos
+  [...grelha.children].forEach((cartao) => {
+    const caixaImagem = cartao.firstElementChild;
+    caixaImagem.classList.add("relative");
+    caixaImagem.appendChild(window.botaoFavorito(Number(cartao.dataset.id)));
+  });
+
   function desenhar() {
+    // Sem dados (site aberto sem servidor): ficam os cartões fixos
+    if (alojamentos.length === 0) return;
+
     grelha.replaceChildren();
 
     const destaques = idsDestaque

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="T2 – Dra. Inês: fotografias, comodidades, preço e localização.">
+  <title>T2 – Dra. Inês | Apartamentos 7 Saias</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script><link rel="stylesheet" href="../icones.css">
+  <script src="../js/idiomas.js" defer></script>
+  <script src="../js/comum.js" defer></script>
+  <script src="../js/menu.js" defer></script>
+</head>
+<body class="bg-[#f4f1eb] font-['Arial',sans-serif] text-[#222]">
+
+  <!-- Cabeçalho -->
+  <header class="absolute inset-x-0 top-0 z-40 text-white">
+    <nav aria-label="Principal" class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-6 lg:px-8 lg:py-8 xl:px-12">
+      <a href="../index.html" class="logo">
+        <img src="../imagens/geral/logo.png" alt="Apartamentos 7 Saias" class="w-20 lg:w-28">
+      </a>
+
+      <div class="flex items-center gap-3 lg:order-last lg:gap-4 xl:gap-6">
+        <a href="../reservar.html" class="border border-white px-4 py-2.5 text-xs uppercase tracking-widest transition-colors hover:border-[#e5c89c] hover:text-[#e5c89c] lg:px-6 lg:py-3" data-idiomas="menu.reservar">Reservar</a>
+
+        <div class="seletor-idioma relative">
+          <button type="button" id="botao-idioma" aria-label="Escolher idioma" aria-expanded="false" class="flex size-9 items-center justify-center rounded-full border border-white transition-colors hover:bg-white/15"><span class="icone icone-globo"></span></button>
+          <div id="opcoes-idioma" class="absolute right-0 top-full z-20 mt-2 hidden min-w-40 bg-white p-1.5 text-sm text-[#14245d] shadow-lg [&.aberto]:block">
+            <button type="button" data-idioma="pt" class="w-full px-3 py-2.5 text-left hover:bg-[#f4f1eb]">🇵🇹 Português</button>
+            <button type="button" data-idioma="en" class="w-full px-3 py-2.5 text-left hover:bg-[#f4f1eb]">🇬🇧 English</button>
+          </div>
+        </div>
+
+        <!-- Botão do menu -->
+        <button type="button" id="menu-botao" aria-expanded="false" aria-controls="menu-principal" aria-label="Menu" class="flex size-9 items-center justify-center text-xl lg:hidden">
+          <span id="menu-icone" aria-hidden="true" class="icone icone-menu size-6"></span>
+        </button>
+      </div>
+
+      <div id="menu-principal" class="hidden fixed inset-0 -z-10 flex-col justify-center gap-2 bg-[#14245d] px-8 text-lg uppercase tracking-widest lg:static lg:z-auto lg:flex lg:w-auto lg:flex-row lg:gap-5 min-[1100px]:gap-8 xl:gap-12 lg:bg-transparent lg:p-0 lg:text-[13px]">
+        <a href="../index.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.inicio">Início</a>
+        <a href="../alojamentos.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.alojamentos">Alojamentos</a>
+        <a href="../experiencia.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.experiencia">A Experiência</a>
+        <a href="../nazare.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.nazare">Nazaré</a>
+        <a href="../avaliacoes.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.avaliacoes">Avaliações</a> <a href="../contactos.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.contactos">Contactos</a>
+      </div>
+    </nav>
+  </header>
+
+     <main>
+
+    <!-- Fotografia principal -->
+    <section class="relative h-screen min-h-[560px] overflow-hidden text-white">
+      <img src="../imagens/alojamentos/t2/t2_dra_ines/1.png" alt="T2 – Dra. Inês" class="absolute inset-0 size-full object-cover">
+      <div class="absolute inset-0 bg-black/25"></div>
+
+      <div class="absolute inset-x-0 bottom-0 flex flex-col items-start gap-6 px-6 pb-8 md:flex-row md:items-end md:justify-between md:px-[4.5vw] md:pb-16">
+        <div>
+          <p class="mb-3 text-sm tracking-[0.25em]" data-idiomas="det.kicker">APARTAMENTOS 7 SAIAS - NAZARÉ</p>
+          <h1 class="font-['Georgia',serif] text-4xl leading-tight md:text-5xl lg:text-6xl">T2 – Dra. Inês</h1>
+        </div>
+        <a href="#galeria" class="shrink-0 border-b border-white pb-1.5 text-lg transition-colors hover:border-[#e5c89c] hover:text-[#e5c89c]" data-idiomas="det.ver_galeria">+ Ver galeria</a>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="px-6 py-12 md:px-[4.5vw] md:py-24">
+      <div class="mb-7">
+        <div class="mb-4 flex items-center gap-4 text-xs tracking-[0.15em] text-[#14245d] md:gap-6 md:text-sm md:tracking-[0.2em]">
+          <span data-idiomas="det.galeria_label">DESCUBRA O ALOJAMENTO</span>
+          <span class="h-px w-12 bg-[#b8c8d9] md:w-24"></span>
+        </div>
+        <h2 class="mb-3.5 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-6xl" data-idiomas="det.galeria_titulo">Um espaço para descobrir.</h2>
+        <p class="text-lg leading-relaxed text-[#71808c]">Explore a galeria e conheça melhor este alojamento e todos os seus detalhes.</p>
+      </div>
+
+      <div class="grid gap-2.5 sm:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-4">
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/1.png" alt="Fotografia 1 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 1</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/2.png" alt="Fotografia 2 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 2</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/3.png" alt="Fotografia 3 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 3</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/4.png" alt="Fotografia 4 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 4</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/5.png" alt="Fotografia 5 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 5</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/6.png" alt="Fotografia 6 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 6</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/7.png" alt="Fotografia 7 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 7</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/8.jpg" alt="Fotografia 8 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 8</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/9.png" alt="Fotografia 9 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 9</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/10.png" alt="Fotografia 10 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 10</span></figure>
+        <figure class="group relative aspect-[4/3] overflow-hidden rounded-md bg-[#e8e6e1]"><img src="../imagens/alojamentos/t2/t2_dra_ines/11.png" alt="Fotografia 11 - T2 – Dra. Inês" class="size-full object-cover transition duration-300 group-hover:scale-105"><span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent px-3.5 pb-3 pt-7 text-left text-sm text-white transition-opacity md:opacity-0 md:group-hover:opacity-100 md:group-focus-visible:opacity-100">Fotografia 11</span></figure>
+      </div>
+    </section>
+
+    <!-- Informações do alojamento -->
+    <section class="px-6 pb-12 pt-5 text-[#14245d] md:px-[4.5vw] md:pb-16">
+
+      <!-- Características -->
+      <h2 class="mb-5 font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl" data-idiomas="det.caract">Características</h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="flex min-h-[85px] items-center gap-4 rounded-lg border border-[#dedbd5] bg-[#faf9f6] px-5 py-4">
+          <span class="flex size-[46px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-xl" aria-hidden="true">♙</span>
+          <div>
+            <span class="mb-0.5 block text-sm text-[#687583]" data-idiomas="det.capacidade">Capacidade</span>
+            <strong class="text-lg font-semibold">5 hóspedes</strong>
+          </div>
+        </div>
+        <div class="flex min-h-[85px] items-center gap-4 rounded-lg border border-[#dedbd5] bg-[#faf9f6] px-5 py-4">
+          <span class="flex size-[46px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-xl" aria-hidden="true">▤</span>
+          <div>
+            <span class="mb-0.5 block text-sm text-[#687583]" data-idiomas="det.quartos">Quartos</span>
+            <strong class="text-lg font-semibold">2</strong>
+          </div>
+        </div>
+        <div class="flex min-h-[85px] items-center gap-4 rounded-lg border border-[#dedbd5] bg-[#faf9f6] px-5 py-4">
+          <span class="flex size-[46px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-xl" aria-hidden="true">€</span>
+          <div>
+            <span class="mb-0.5 block text-sm text-[#687583]" data-idiomas="det.preco">Preço</span>
+            <strong class="text-lg font-semibold">Desde 120,00&nbsp;€ / noite</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comodidades -->
+      <h2 class="mt-9 mb-5 font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl" data-idiomas="det.comodidades">Comodidades</h2>
+      <ul class="grid gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>Wi-Fi</li>
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>Sala</li>
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>Cozinha</li>
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>Casa de banho</li>
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>TV</li>
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>Varanda</li>
+        <li class="flex items-center gap-3"><span class="flex size-[34px] shrink-0 items-center justify-center rounded-full bg-[#e2eaf1] text-[#14245d]"><span class="icone icone-visto size-4" aria-hidden="true"></span></span>Roupa de cama e atoalhados</li>
+      </ul>
+      
+      <!-- Características adicionais -->
+      <div class="mt-9">
+        <h2 class="mb-5 font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl">Informações do alojamento</h2>
+        <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <li class="border-l-4 border-[#1d2d78] bg-white px-4 py-3 font-medium text-[#14245d]">2 camas de casal</li>
+          <li class="border-l-4 border-[#1d2d78] bg-white px-4 py-3 font-medium text-[#14245d]">2 sofás camas</li>
+          <li class="border-l-4 border-[#1d2d78] bg-white px-4 py-3 font-medium text-[#14245d]">Vista para o mar</li>
+          <li class="border-l-4 border-[#1d2d78] bg-white px-4 py-3 font-medium text-[#14245d]">1º andar com elevador</li>
+        </ul>
+      </div>
+
+      <!-- Descrição -->
+      <div class="mt-10">
+        <p class="mb-2.5 text-xs uppercase tracking-[0.16em] text-[#758391]">T2 – DRA. INÊS</p>
+        <h2 class="mb-5 font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl" data-idiomas="det.titulo_desc">Conforto e tranquilidade na Nazaré.</h2>
+        <p class="mb-2 max-w-4xl leading-relaxed text-[#687583]">Descubra um espaço acolhedor, pensado para proporcionar uma estadia confortável durante a sua visita à Nazaré.</p>
+        <p class="mb-2 max-w-4xl leading-relaxed text-[#687583]">Desfrute de um ambiente tranquilo e aproveite tudo o que a região tem para oferecer.</p>
+      </div>
+
+      <!-- Localização -->
+      <div class="mt-9 border-t border-[#d8d6d0] pt-7">
+        <h2 class="mb-5 font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl">Localização</h2>
+        <p class="mb-3 leading-relaxed text-[#687583]">Saiba onde fica este alojamento na Nazaré.</p>
+        <p class="mb-4 flex items-center gap-2 text-[#14245d]">
+          <span class="icone icone-morada size-5 text-[#1d2d78]"></span>          
+          <span>Av. do Município 1, 2450-106 Nazaré</span>
+        </p>
+        <a href="https://maps.app.goo.gl/HES5gMNgZXyKHzYz8" target="_blank" rel="noopener" class="w-fit items-center gap-1.5 border-b border-[#14245d] pb-1 text-sm text-[#14245d] hover:text-[#b49468] hover:border-[#b49468] [&:not([hidden])]:inline-flex">Abrir no Google Maps <span class="icone icone-externo size-4"></span></a>
+      </div>
+
+      <!-- Disponibilidade -->
+      <div class="mt-9 border-t border-[#d8d6d0] pt-7 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <h2 class="font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl">Disponibilidade</h2>
+        <a href="../reservar.html?alojamento=70" class="shrink-0 rounded-md bg-[#14245d] px-6 py-4 text-center text-sm tracking-wide text-white transition-colors hover:bg-[#e5c89c] hover:text-[#14245d]" data-idiomas="det.disponibilidade">CONSULTAR DISPONIBILIDADE</a>
+      </div>
+
+    </section>
+  </main>
+
+
+  <!-- Rodapé -->
+  <footer class="grid justify-items-center gap-6 px-6 pb-5 pt-10 text-center text-sm text-[#14245d] md:grid-cols-[1fr_1.5fr_1fr] md:items-start md:justify-items-start md:px-[8%] md:text-left">
+    <img src="../imagens/geral/logo_azul.png" alt="Apartamentos 7 Saias" class="w-24">
+
+    <div class="flex flex-col items-center gap-1.5 md:items-start">
+      <h3 class="mb-2 text-xs font-semibold uppercase tracking-widest">Onde estamos</h3>
+      <p>Avenida do Município, n.º 4</p>
+      <p>2450 Nazaré, Portugal</p>
+      <a href="tel:+351965214539" class="mt-1 hover:text-[#b49468]">+351 965 214 539</a>
+      <a href="mailto:apartamentos7saias@gmail.com" class="break-all hover:text-[#b49468]">apartamentos7saias@gmail.com</a>
+    </div>
+
+    <div class="grid grid-cols-2 justify-items-center gap-x-10 gap-y-2 md:justify-items-start">
+      <h3 class="col-span-2 mb-2 text-xs font-semibold uppercase tracking-widest">Explorar</h3>
+      <a href="../index.html" class="hover:text-[#b49468]" data-idiomas="menu.inicio">Início</a>
+      <a href="../alojamentos.html" class="hover:text-[#b49468]" data-idiomas="menu.alojamentos">Alojamentos</a>
+      <a href="../index.html#experiencia" class="hover:text-[#b49468]">Experiência</a>
+      <a href="../avaliacoes.html" class="hover:text-[#b49468]" data-idiomas="menu.avaliacoes">Avaliações</a> <a href="../contactos.html" class="hover:text-[#b49468]" data-idiomas="menu.contactos">Contactos</a>
+      <a href="../reservar.html" class="hover:text-[#b49468]" data-idiomas="menu.reservar">Reservar</a>
+    </div>
+
+    <div class="flex w-full flex-col items-center gap-2.5 border-t border-[#ded8ce] pt-4 text-xs md:col-span-full md:flex-row md:justify-between">
+      <p>© 2026 Apartamentos 7 Saias · Licença n.º 50668 · <a href="../admin.html" class="opacity-50 hover:opacity-100">Área reservada</a></p>
+      <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-[#b49468]">Livro de Reclamações</a>
+    </div>
+  </footer>
+
+</body>
+</html>

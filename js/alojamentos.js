@@ -11,6 +11,16 @@
   let carregado = false;
   let falhou = false;
   let filtro = new URLSearchParams(location.search).get("tipo") || "todos";
+  
+  // Cartões fixos do HTML (para quando o site abre sem servidor)
+  const cartoesFixos = [...grelha.children];
+
+  // Coração dos favoritos nos cartões fixos
+  cartoesFixos.forEach((cartao) => {
+    const caixaImagem = cartao.firstElementChild;
+    caixaImagem.classList.add("relative");
+    caixaImagem.appendChild(window.botaoFavorito(Number(cartao.dataset.id)));
+  });
 
   // Cartão dos espaços comuns
   function cartaoEspacosComuns() {
@@ -53,18 +63,14 @@
       botao.setAttribute("aria-pressed", ativo ? "true" : "false");
     });
 
-    if (falhou) {
-      mensagem.textContent = t("comum.erro_carregar");
-      mensagem.hidden = false;
-      return;
-    }
+    // Sem servidor: fica o cartão fixo do HTML
+    // Sem servidor: usa os cartões fixos do HTML; com servidor: os da base de dados
+    const semServidor = falhou || !carregado;
+    const lista = semServidor
+      ? cartoesFixos.map((cartao) => ({ id: Number(cartao.dataset.id), tipologia: cartao.dataset.tipologia, cartao }))
+      : alojamentos;
 
-    if (!carregado) {
-      mensagem.hidden = true;
-      return;
-    }
-
-    const visiveis = alojamentos.filter((a) => {
+    const visiveis = lista.filter((a) => {
       if (filtro === "favoritos") return window.favoritos.tem(a.id);
       return filtro === "todos" || a.tipologia === filtro;
     });
@@ -72,7 +78,7 @@
     // Primeiro aparecem os alojamentos normais
     visiveis.forEach((alojamento) => {
       grelha.appendChild(
-        window.cartaoAlojamento("alojamento", alojamento)
+        semServidor ? alojamento.cartao : window.cartaoAlojamento("alojamento", alojamento)
       );
     });
 
