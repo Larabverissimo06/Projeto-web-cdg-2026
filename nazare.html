@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-titulo="naz.titulo_pagina">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubra a Nazaré: a praia, o Sítio, as ondas gigantes e a lenda.">
+  <title>Nazaré | Apartamentos 7 Saias</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script><link rel="stylesheet" href="icones.css">
+  <script src="js/idiomas.js" defer></script>
+  <script src="js/comum.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body class="bg-[#f4f1eb] font-['Arial',sans-serif] text-[#222]">
+
+  <!-- Cabeçalho -->
+  <header class="absolute inset-x-0 top-0 z-40 text-white">
+    <nav aria-label="Principal" class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-6 lg:px-8 lg:py-8 xl:px-12">
+      <a href="index.html" class="logo">
+        <img src="/imagens/geral/logo.png" alt="Apartamentos 7 Saias" class="w-20 lg:w-28">
+      </a>
+
+      <div class="flex items-center gap-3 lg:order-last lg:gap-4 xl:gap-6">
+        <a href="reservar.html" class="border border-white px-4 py-2.5 text-xs uppercase tracking-widest transition-colors hover:border-[#e5c89c] hover:text-[#e5c89c] lg:px-6 lg:py-3" data-idiomas="menu.reservar">Reservar</a>
+
+        <div class="seletor-idioma relative">
+          <button type="button" id="botao-idioma" aria-label="Escolher idioma" aria-expanded="false" class="flex size-9 items-center justify-center rounded-full border border-white transition-colors hover:bg-white/15"><span class="icone icone-globo"></span></button>
+          <div id="opcoes-idioma" class="absolute right-0 top-full z-20 mt-2 hidden min-w-40 bg-white p-1.5 text-sm text-[#14245d] shadow-lg [&.aberto]:block">
+            <button type="button" data-idioma="pt" class="w-full px-3 py-2.5 text-left hover:bg-[#f4f1eb]">🇵🇹 Português</button>
+            <button type="button" data-idioma="en" class="w-full px-3 py-2.5 text-left hover:bg-[#f4f1eb]">🇬🇧 English</button>
+          </div>
+        </div>
+
+        <!-- Botão do menu -->
+        <button type="button" id="menu-botao" aria-expanded="false" aria-controls="menu-principal" aria-label="Menu" class="flex size-9 items-center justify-center text-xl lg:hidden">
+          <span id="menu-icone" aria-hidden="true" class="icone icone-menu size-6"></span>
+        </button>
+      </div>
+
+      <div id="menu-principal" class="hidden fixed inset-0 -z-10 flex-col justify-center gap-2 bg-[#14245d] px-8 text-lg uppercase tracking-widest lg:static lg:z-auto lg:flex lg:w-auto lg:flex-row lg:gap-5 min-[1100px]:gap-8 xl:gap-12 lg:bg-transparent lg:p-0 lg:text-[13px]">
+        <a href="index.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.inicio">Início</a>
+        <a href="alojamentos.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.alojamentos">Alojamentos</a>
+        <a href="experiencia.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.experiencia">A Experiência</a>
+        <a href="nazare.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.nazare">Nazaré</a>
+        <a href="avaliacoes.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.avaliacoes">Avaliações</a> <a href="contactos.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.contactos">Contactos</a>
+      </div>
+    </nav>
+  </header>
+
+     <main>
+    <!-- Topo da página -->
+    <section class="relative h-[75vh] min-h-[480px] bg-[url('/imagens/geral/nazare-topo.jpg')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute bottom-[12%] left-6 right-6 text-white md:left-[10%]">
+        <p class="mb-5 text-xs tracking-[0.3em]" data-idiomas="naz.kicker">APARTAMENTOS 7 SAIAS</p>
+        <h1 class="mb-5 font-['Georgia',serif] text-5xl leading-none md:text-7xl" data-idiomas="naz.titulo">Nazaré</h1>
+        <p class="max-w-xl text-base leading-relaxed md:text-lg" data-idiomas="naz.sub">Entre o mar, a tradição e a história.</p>
+      </div>
+    </section>
+
+    <!-- A vila -->
+    <section class="grid items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-16 md:px-[8%] md:py-28">
+      <div>
+        <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]" data-idiomas="naz.intro_pequeno">A VILA</p>
+        <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl whitespace-pre-line" data-idiomas="naz.intro_titulo">Uma vila com
+alma de mar.</h2>
+        <p class="mb-6 text-[17px] leading-loose text-[#666]" data-idiomas="naz.intro_p">A Nazaré é uma das vilas piscatórias mais conhecidas de Portugal. Combina uma grande praia, bairros tradicionais, gastronomia assente no peixe e no marisco, e um ambiente que muda ao ritmo das estações.</p>
+        <p class="text-[17px] leading-loose text-[#666]">A vila divide-se em três zonas: a Praia, junto ao mar, onde ficam os nossos apartamentos; o Sítio, no alto da falésia; e a Pederneira, o núcleo mais antigo.</p>
+      </div>
+      <img src="/imagens/geral/imagem_2.jpg" alt="Vista do Sítio sobre a vila e a praia da Nazaré" class="h-96 w-full rounded-3xl object-cover md:h-[560px]">
+    </section>
+
+    <!-- Em números -->
+    <section class="mx-6 grid grid-cols-2 border-y border-[#ded8ce] md:mx-[8%] md:grid-cols-4">
+      <div class="flex flex-col items-center gap-2 px-4 py-10 text-center">
+        <span class="font-['Georgia',serif] text-4xl text-[#14245d] md:text-5xl">3</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-[#666]">zonas: Praia, Sítio e Pederneira</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-10 text-center">
+        <span class="font-['Georgia',serif] text-4xl text-[#14245d] md:text-5xl">1889</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-[#666]">ano do Ascensor da Nazaré</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-10 text-center">
+        <span class="font-['Georgia',serif] text-4xl text-[#14245d] md:text-5xl">out – mar</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-[#666]">época das ondas gigantes</span>
+      </div>
+      <div class="flex flex-col items-center gap-2 px-4 py-10 text-center">
+        <span class="font-['Georgia',serif] whitespace-nowrap text-3xl text-[#14245d] md:text-5xl">7</span>
+        <span class="text-xs uppercase tracking-[0.2em] text-[#666]">saias da tradição</span>
+      </div>
+    </section>
+
+    <!-- O que conhecer -->
+    <section class="px-6 py-20 md:px-[8%] md:py-28">
+      <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">O QUE CONHECER</p>
+      <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl">Do Sítio à Praia do Norte.</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white">
+          <div class="h-60 overflow-hidden">
+            <img src="/imagens/geral/ondas.jpg" alt="Surfista numa onda gigante" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="px-6 pb-7 pt-6">
+            <h3 class="mb-3 font-['Georgia',serif] text-2xl text-[#14245d]" data-idiomas="naz.c1_titulo">Ondas gigantes</h3>
+            <p class="text-justify hyphens-auto leading-relaxed text-[#666]" data-idiomas="naz.c1_p">Na Praia do Norte, junto ao Forte de São Miguel Arcanjo, formam-se algumas das maiores ondas surfáveis do mundo, sobretudo entre o outono e o inverno.</p>
+          </div>
+        </article>
+        <article class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white">
+          <div class="h-60 overflow-hidden">
+            <img src="/imagens/geral/imagem_1.jpg" alt="Pescadores no miradouro do Sítio" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="px-6 pb-7 pt-6">
+            <h3 class="mb-3 font-['Georgia',serif] text-2xl text-[#14245d]" data-idiomas="naz.c2_titulo">O Sítio</h3>
+            <p class="text-justify hyphens-auto leading-relaxed text-[#666]" data-idiomas="naz.c2_p">O bairro alto da vila, com vista sobre a praia, o Santuário de Nossa Senhora da Nazaré e o Elevador (funicular) que liga o Sítio à praia.</p>
+          </div>
+        </article>
+        <article class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white">
+          <div class="h-60 overflow-hidden">
+            <img src="/imagens/geral/nazare.png" alt="Forte de São Miguel Arcanjo e o farol" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="px-6 pb-7 pt-6">
+            <h3 class="mb-3 font-['Georgia',serif] text-2xl text-[#14245d]">O Forte e o Farol</h3>
+            <p class="text-justify hyphens-auto leading-relaxed text-[#666]">No promontório do Sítio, o forte guarda o farol da Nazaré e uma exposição sobre as ondas gigantes. É o melhor lugar para as ver.</p>
+          </div>
+        </article>
+        <article class="group flex flex-col overflow-hidden rounded-3xl border border-[#e8e1d7] bg-white">
+          <div class="h-60 overflow-hidden">
+            <img src="/imagens/geral/imagem_3.jpg" alt="Barco tradicional na praia da Nazaré" class="size-full object-cover transition duration-500 group-hover:scale-105">
+          </div>
+          <div class="px-6 pb-7 pt-6">
+            <h3 class="mb-3 font-['Georgia',serif] text-2xl text-[#14245d]" data-idiomas="naz.c4_titulo">Tradições</h3>
+            <p class="text-justify hyphens-auto leading-relaxed text-[#666]" data-idiomas="naz.c4_p">As mulheres da Nazaré são célebres pelas sete saias, tradição que inspira o nome dos nossos apartamentos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- A lenda -->
+    <section class="mx-6 border-t border-[#ded8ce] py-20 text-center md:mx-[8%] md:py-28">
+      <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">A LENDA DA NAZARÉ</p>
+      <blockquote class="mx-auto max-w-3xl font-['Georgia',serif] text-2xl leading-snug text-[#14245d] md:text-4xl">“Em 1182, numa manhã de nevoeiro, D. Fuas Roupinho perseguia um veado até à beira da falésia. Pediu ajuda a Nossa Senhora e o cavalo parou mesmo à beira do precipício.”</blockquote>
+      <p class="mx-auto mt-6 max-w-xl leading-relaxed text-[#666]">No local foi construída a Ermida da Memória, que ainda hoje pode visitar no Sítio.</p>
+    </section>
+
+    <!-- Sabores -->
+    <section class="grid bg-[#14245d] text-white md:grid-cols-2">
+      <div class="flex flex-col justify-center px-6 py-20 md:px-[10%]">
+        <p class="mb-6 text-xs tracking-[0.25em] text-[#e5c89c]">SABORES DA NAZARÉ</p>
+        <h2 class="mb-6 font-['Georgia',serif] text-4xl leading-tight lg:text-5xl" data-idiomas="naz.c3_titulo">Gastronomia</h2>
+        <p class="mb-10 text-[17px] leading-loose text-white/75" data-idiomas="naz.c3_p">Peixe grelhado, caldeirada e peixe seco ao sol, uma imagem de marca da praia da Nazaré.</p>
+        <ul class="flex flex-col gap-5">
+          <li class="border-b border-white/20 pb-5">
+            <h3 class="mb-1 font-['Georgia',serif] text-2xl">Caldeirada</h3>
+            <p class="leading-relaxed text-white/75">Peixe e marisco cozinhados em camadas com batata, tomate e pimento.</p>
+          </li>
+          <li class="border-b border-white/20 pb-5">
+            <h3 class="mb-1 font-['Georgia',serif] text-2xl">Peixe seco</h3>
+            <p class="leading-relaxed text-white/75">Carapau e outros peixes secos ao sol na areia, como se faz há gerações.</p>
+          </li>
+          <li class="border-b border-white/20 pb-5">
+            <h3 class="mb-1 font-['Georgia',serif] text-2xl">Peixe grelhado</h3>
+            <p class="leading-relaxed text-white/75">Sardinha, robalo ou dourada, acabados de chegar do mar.</p>
+          </li>
+        </ul>
+      </div>
+      <img src="/imagens/alojamentos/espacos_comuns_millennium/6.jpeg" alt="Praia da Nazaré vista de um terraço" class="h-80 w-full object-cover md:h-full">
+    </section>
+
+    <!-- Quando visitar -->
+    <section class="px-6 py-20 md:px-[8%] md:py-28">
+      <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">QUANDO VISITAR</p>
+      <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl">Uma vila para todo o ano.</h2>
+      <ol class="grid gap-10 md:grid-cols-3">
+        <li class="border-t border-[#ded8ce] pt-6">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#b49468]">junho a setembro</p>
+          <h3 class="mb-3 mt-2 font-['Georgia',serif] text-2xl text-[#14245d]">Verão</h3>
+          <p class="text-justify hyphens-auto leading-relaxed text-[#666]">Dias longos de praia, passeios à beira-mar e esplanadas. Em setembro, as Festas de Nossa Senhora da Nazaré enchem o Sítio de procissões, música e feira.</p>
+        </li>
+        <li class="border-t border-[#ded8ce] pt-6">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#b49468]">outubro a março</p>
+          <h3 class="mb-3 mt-2 font-['Georgia',serif] text-2xl text-[#14245d]">Outono e inverno</h3>
+          <p class="text-justify hyphens-auto leading-relaxed text-[#666]">A época das ondas gigantes na Praia do Norte. Os dias de grande ondulação atraem surfistas e curiosos de todo o mundo.</p>
+        </li>
+        <li class="border-t border-[#ded8ce] pt-6">
+          <p class="text-xs uppercase tracking-[0.2em] text-[#b49468]">fevereiro ou março</p>
+          <h3 class="mb-3 mt-2 font-['Georgia',serif] text-2xl text-[#14245d]">Carnaval</h3>
+          <p class="text-justify hyphens-auto leading-relaxed text-[#666]">Um dos carnavais mais animados do país, com desfiles, máscaras e muita gente na rua durante vários dias.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Perto da Nazaré -->
+    <section class="grid gap-10 border-t border-[#ded8ce] px-6 py-20 md:grid-cols-[1fr_1.4fr] md:gap-16 md:px-[8%] md:py-28">
+      <div>
+        <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">PERTO DA NAZARÉ</p>
+        <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl">Passeios de um dia.</h2>
+        <p class="text-[17px] leading-loose text-[#666]">A Nazaré fica no centro do país, perto de alguns dos monumentos mais importantes de Portugal. Os tempos são aproximados, de carro.</p>
+      </div>
+      <ul>
+        <li class="flex items-baseline justify-between gap-4 border-b border-[#ded8ce] py-5">
+          <div>
+            <h3 class="font-semibold text-[#14245d]">Alcobaça</h3>
+            <p class="text-sm text-[#666]">Mosteiro de Alcobaça, Património Mundial.</p>
+          </div>
+          <span class="shrink-0 text-sm text-[#b49468]">15 min</span>
+        </li>
+        <li class="flex items-baseline justify-between gap-4 border-b border-[#ded8ce] py-5">
+          <div>
+            <h3 class="font-semibold text-[#14245d]">São Martinho do Porto</h3>
+            <p class="text-sm text-[#666]">Baía em forma de concha, de águas calmas.</p>
+          </div>
+          <span class="shrink-0 text-sm text-[#b49468]">20 min</span>
+        </li>
+        <li class="flex items-baseline justify-between gap-4 border-b border-[#ded8ce] py-5">
+          <div>
+            <h3 class="font-semibold text-[#14245d]">Batalha</h3>
+            <p class="text-sm text-[#666]">Mosteiro da Batalha, Património Mundial.</p>
+          </div>
+          <span class="shrink-0 text-sm text-[#b49468]">30 min</span>
+        </li>
+        <li class="flex items-baseline justify-between gap-4 border-b border-[#ded8ce] py-5">
+          <div>
+            <h3 class="font-semibold text-[#14245d]">Óbidos</h3>
+            <p class="text-sm text-[#666]">Vila medieval dentro de muralhas.</p>
+          </div>
+          <span class="shrink-0 text-sm text-[#b49468]">40 min</span>
+        </li>
+        <li class="flex items-baseline justify-between gap-4 border-b border-[#ded8ce] py-5">
+          <div>
+            <h3 class="font-semibold text-[#14245d]">Fátima</h3>
+            <p class="text-sm text-[#666]">Santuário de Fátima.</p>
+          </div>
+          <span class="shrink-0 text-sm text-[#b49468]">45 min</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Reservar -->
+    <section class="flex flex-col items-center bg-[#1d2d78] px-6 py-20 text-center text-white md:py-28">
+      <p class="mb-6 text-xs tracking-[0.25em]">APARTAMENTOS 7 SAIAS</p>
+      <h2 class="mb-8 max-w-3xl font-['Georgia',serif] text-4xl leading-snug lg:text-6xl lg:leading-tight" data-idiomas="naz.cta_titulo">Fique perto de tudo.</h2>
+      <a href="reservar.html" class="border border-white px-9 py-4 text-xs tracking-[0.2em] transition-colors hover:border-[#e5c89c] hover:text-[#e5c89c]" data-idiomas="naz.cta_botao">RESERVAR AGORA</a>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="grid justify-items-center gap-6 px-6 pb-5 pt-10 text-center text-sm text-[#14245d] md:grid-cols-[1fr_1.5fr_1fr] md:items-start md:justify-items-start md:px-[8%] md:text-left">
+    <img src="/imagens/geral/logo_azul.png" alt="Apartamentos 7 Saias" class="w-24">
+
+    <div class="flex flex-col items-center gap-1.5 md:items-start">
+      <h3 class="mb-2 text-xs font-semibold uppercase tracking-widest">Onde estamos</h3>
+      <p>Avenida do Município, n.º 4</p>
+      <p>2450 Nazaré, Portugal</p>
+      <a href="tel:+351965214539" class="mt-1 hover:text-[#b49468]">+351 965 214 539</a>
+      <a href="mailto:apartamentos7saias@gmail.com" class="break-all hover:text-[#b49468]">apartamentos7saias@gmail.com</a>
+    </div>
+
+    <div class="grid grid-cols-2 justify-items-center gap-x-10 gap-y-2 md:justify-items-start">
+      <h3 class="col-span-2 mb-2 text-xs font-semibold uppercase tracking-widest">Explorar</h3>
+      <a href="index.html" class="hover:text-[#b49468]" data-idiomas="menu.inicio">Início</a>
+      <a href="alojamentos.html" class="hover:text-[#b49468]" data-idiomas="menu.alojamentos">Alojamentos</a>
+      <a href="index.html#experiencia" class="hover:text-[#b49468]">Experiência</a>
+      <a href="avaliacoes.html" class="hover:text-[#b49468]" data-idiomas="menu.avaliacoes">Avaliações</a> <a href="contactos.html" class="hover:text-[#b49468]" data-idiomas="menu.contactos">Contactos</a>
+      <a href="reservar.html" class="hover:text-[#b49468]" data-idiomas="menu.reservar">Reservar</a>
+    </div>
+
+    <div class="flex w-full flex-col items-center gap-2.5 border-t border-[#ded8ce] pt-4 text-xs md:col-span-full md:flex-row md:justify-between">
+      <p>© 2026 Apartamentos 7 Saias · Licença n.º 50668 · <a href="admin.html" class="opacity-50 hover:opacity-100">Área reservada</a></p>
+      <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-[#b49468]">Livro de Reclamações</a>
+    </div>
+  </footer>
+
+</body>
+</html>

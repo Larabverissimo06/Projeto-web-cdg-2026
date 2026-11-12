@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Área de administração dos Apartamentos 7 Saias.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administração | Apartamentos 7 Saias</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script><link rel="stylesheet" href="icones.css">
+  <script src="js/admin.js" defer></script>
+</head>
+<body class="bg-[#f4f1eb] font-['Arial',sans-serif] text-[#222]">
+
+  <header class="flex items-center gap-3 border-b border-[#ddd] bg-white px-4 py-3 md:gap-5 md:px-8">
+    <a href="index.html" class="shrink-0" aria-label="Ir para a página principal">
+      <img src="/imagens/geral/logo_azul.png" alt="Apartamentos 7 Saias" class="h-10 w-auto md:h-12">
+    </a>
+    <h1 class="min-w-0 flex-1 truncate text-lg font-bold text-[#14245d] md:text-xl">Administração</h1>
+    <a href="index.html" class="inline-flex items-center gap-2 whitespace-nowrap px-2 py-2 text-[13px] text-[#1d2d78] transition-colors hover:text-[#b49468]" aria-label="Voltar ao site">
+      <span class="icone icone-voltar size-4"></span>
+      <span class="hidden sm:inline">Voltar ao site</span>
+    </a>
+    <button type="button" id="sair" class="whitespace-nowrap border border-[#1d2d78] px-3 py-2 text-[13px] text-[#1d2d78] hover:border-[#e5c89c] hover:bg-[#e5c89c] hover:text-[#14245d] md:px-4" hidden>Terminar sessão</button>
+  </header>
+
+  <main class="mx-auto max-w-[1200px] px-4 pb-20 pt-8 md:px-6">
+
+    <!-- Início de sessão -->
+    <section id="admin-login" class="mx-auto my-12 max-w-[420px] border border-[#ddd] bg-white p-8">
+      <h2 class="mb-5 text-2xl font-bold text-[#14245d]">Entrar</h2>
+      <form id="form-login" class="flex flex-col gap-4">
+        <div class="grid gap-1.5">
+          <label for="admin-password" class="text-[13px] font-bold text-[#666]">Palavra-passe de administração</label>
+          <input type="password" id="admin-password" autocomplete="current-password" required class="w-full border border-[#ddd] p-3 focus:outline focus:outline-2 focus:outline-offset-1 focus:outline-[#1d2d78]">
+        </div>
+        <p id="erro-login" class="border border-[#f3b7b1] bg-[#fdecea] px-3 py-2.5 text-[#8a1c13]" role="alert" hidden></p>
+        <button type="submit" class="w-fit border border-[#1d2d78] bg-[#1d2d78] px-6 py-3 text-xs tracking-[0.2em] text-white hover:border-[#e5c89c] hover:bg-[#e5c89c] hover:text-[#14245d]">ENTRAR</button>
+      </form>
+    </section>
+
+    <!-- Painel -->
+    <div id="admin-painel" hidden>
+      <!-- Abas -->
+      <nav class="admin-abas mb-5 flex flex-wrap gap-2" role="tablist">
+        <button type="button" role="tab" data-aba="reservas" class="ativo border border-[#1d2d78] bg-white px-5 py-2.5 text-[#1d2d78] [&.ativo]:bg-[#1d2d78] [&.ativo]:text-white">Reservas</button>
+        <button type="button" role="tab" data-aba="canceladas" class="border border-[#1d2d78] bg-white px-5 py-2.5 text-[#1d2d78] [&.ativo]:bg-[#1d2d78] [&.ativo]:text-white">Canceladas</button>
+        <button type="button" role="tab" data-aba="alojamentos" class="border border-[#1d2d78] bg-white px-5 py-2.5 text-[#1d2d78] [&.ativo]:bg-[#1d2d78] [&.ativo]:text-white">Alojamentos</button>
+        <button type="button" role="tab" data-aba="avaliacoes" class="border border-[#1d2d78] bg-white px-5 py-2.5 text-[#1d2d78] [&.ativo]:bg-[#1d2d78] [&.ativo]:text-white">Avaliações</button>
+        <button type="button" role="tab" data-aba="estatisticas" class="border border-[#1d2d78] bg-white px-5 py-2.5 text-[#1d2d78] [&.ativo]:bg-[#1d2d78] [&.ativo]:text-white">Estatísticas</button>
+        <button type="button" role="tab" data-aba="codigos" class="border border-[#1d2d78] bg-white px-5 py-2.5 text-[#1d2d78] [&.ativo]:bg-[#1d2d78] [&.ativo]:text-white">Códigos</button>
+      </nav>
+
+      <p id="admin-mensagem" class="mb-4 border border-[#b6dcbf] bg-[#e7f4ea] px-3.5 py-2.5 text-[#1c5a2b] [&.erro]:border-[#f3b7b1] [&.erro]:bg-[#fdecea] [&.erro]:text-[#8a1c13]" role="status" hidden></p>
+
+      <section id="aba-reservas">
+        <div class="mb-3 flex flex-wrap gap-4 text-[13px] text-[#666]">
+          <label class="grid gap-1">Estado
+            <select id="filtro-estado" class="border border-[#ddd] bg-white px-2.5 py-2 sm:min-w-[180px]">
+              <option value="todas">Todas</option>
+              <option value="confirmada" selected>Confirmadas</option>
+              <option value="cancelada">Canceladas (todas)</option>
+              <option value="cancelada_cliente">Canceladas pelo cliente</option>
+              <option value="cancelada_alojamento">Canceladas pelo alojamento</option>
+            </select>
+          </label>
+
+          <label class="grid gap-1">Alojamento
+            <select id="filtro-alojamento" class="border border-[#ddd] bg-white px-2.5 py-2 sm:min-w-[180px]"><option value="">Todos</option></select>
+          </label>
+
+          <label class="grid gap-1">Procurar
+            <input type="search" id="filtro-texto" placeholder="Nome ou e-mail" class="border border-[#ddd] bg-white px-2.5 py-2 sm:min-w-[180px]">
+          </label>
+        </div>
+
+        <p id="resumo-reservas" class="mb-3 text-[#666]"></p>
+
+        <!-- Tabela -->
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse bg-white text-sm [&_td]:border-b [&_td]:border-[#ddd] [&_td]:px-3 [&_td]:py-2.5 [&_td]:align-top [&_th]:whitespace-nowrap [&_th]:bg-[#1d2d78] [&_th]:px-3 [&_th]:py-2.5 [&_th]:text-left [&_th]:font-semibold [&_th]:text-white [&_tr.cancelada_td]:bg-[#f6f6f6] [&_tr.cancelada_td]:text-[#666]">
+            <thead>
+              <tr>
+                <th>N.º</th><th>Cliente</th><th>Alojamento</th><th>Entrada</th><th>Saída</th>
+                <th>Hóspedes</th><th>Total</th><th>Estado</th><th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="corpo-reservas"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="aba-alojamentos" hidden>
+        <div id="lista-alojamentos-admin"></div>
+      </section>
+
+      <section id="aba-avaliacoes" hidden>
+        <div id="lista-avaliacoes-admin" class="grid gap-3"></div>
+      </section>
+
+      
+      <section id="aba-codigos" hidden>
+        <!-- Criar código novo -->
+        <form id="form-codigo" class="mb-6 flex flex-wrap items-end gap-4 border border-[#ddd] bg-white p-4 text-[13px] text-[#666]">
+          <label class="grid gap-1">Código
+            <input type="text" id="novo-codigo" maxlength="20" required placeholder="VERAO10" class="border border-[#ddd] px-2.5 py-2 uppercase">
+          </label>
+          <label class="grid gap-1">Desconto (%)
+            <input type="number" id="nova-percentagem" min="1" max="90" required value="10" class="w-24 border border-[#ddd] px-2.5 py-2">
+          </label>
+          <label class="grid gap-1">Válido até (opcional)
+            <input type="date" id="nova-validade" class="border border-[#ddd] px-2.5 py-2">
+          </label>
+          <button type="submit" class="border border-[#1d2d78] bg-[#1d2d78] px-5 py-2 text-white hover:border-[#e5c89c] hover:bg-[#e5c89c] hover:text-[#14245d]">Criar código</button>
+        </form>
+
+        <div id="lista-codigos-admin" class="grid gap-3"></div>
+      </section>
+
+      
+      <section id="aba-estatisticas" class="flex-col gap-6 [&:not([hidden])]:flex" hidden>        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 class="font-['Georgia',serif] text-3xl text-[#14245d]">Estatísticas</h2>
+            <p class="mt-1 text-sm text-[#666]">Reservas, receita e avaliações dos Apartamentos 7 Saias.</p>
+          </div>
+          <label class="grid gap-1 text-[13px] text-[#666]">Período
+            <select id="periodo-estatisticas" class="border border-[#ddd] bg-white px-2.5 py-2 sm:min-w-[180px]">
+              <option value="">Todo o período</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Indicadores -->
+        <dl id="indicadores" class="grid grid-cols-2 gap-4 lg:grid-cols-4"></dl>
+
+        <!-- Reservas por mês -->
+        <div class="min-w-0 rounded-lg border border-[#ddd] bg-white p-5">
+          <h3 class="mb-4 text-lg font-bold text-[#14245d]">Reservas por mês de entrada</h3>
+          <div id="grafico-meses" class="flex h-48 items-end gap-1.5 sm:gap-3"></div>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <!-- Gráficos -->
+          <div class="min-w-0 rounded-lg border border-[#ddd] bg-white p-5">
+            <h3 class="mb-4 text-lg font-bold text-[#14245d]">Receita por tipologia</h3>
+            <ul id="barras-tipologia" class="flex flex-col gap-3 text-sm"></ul>
+          </div>
+
+          <div class="min-w-0 rounded-lg border border-[#ddd] bg-white p-5">
+            <h3 class="mb-4 text-lg font-bold text-[#14245d]">Alojamentos mais reservados</h3>
+            <ul id="barras-top" class="flex flex-col gap-3 text-sm"></ul>
+          </div>
+        </div>
+
+        <!-- Tabela dos descontos -->
+        <div class="min-w-0 rounded-lg border border-[#ddd] bg-white p-5">
+          <h3 class="mb-4 text-lg font-bold text-[#14245d]">Descontos usados</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-left text-[11px] uppercase tracking-wider text-[#666]">
+                  <th class="py-2 pr-3 font-medium">Desconto</th>
+                  <th class="py-2 pr-3 text-right font-medium">Reservas</th>
+                  <th class="py-2 text-right font-medium">Total descontado</th>
+                </tr>
+              </thead>
+              <tbody id="tabela-descontos" class="divide-y divide-[#eee]"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

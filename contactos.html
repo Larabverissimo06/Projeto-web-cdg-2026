@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-titulo="cont.titulo_pagina">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Telefone, e-mail e localização da receção dos Apartamentos 7 Saias, na Nazaré.">
+  <title>Contactos | Apartamentos 7 Saias</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script><link rel="stylesheet" href="icones.css">
+  <script src="js/idiomas.js" defer></script>
+  <script src="js/comum.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</head>
+<body class="bg-[#f4f1eb] font-['Arial',sans-serif] text-[#222]">
+
+  <!-- Cabeçalho -->
+  <header class="absolute inset-x-0 top-0 z-40 text-white">
+    <nav aria-label="Principal" class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 px-6 py-6 lg:px-8 lg:py-8 xl:px-12">
+      <a href="index.html" class="logo">
+        <img src="/imagens/geral/logo.png" alt="Apartamentos 7 Saias" class="w-20 lg:w-28">
+      </a>
+
+      <div class="flex items-center gap-3 lg:order-last lg:gap-4 xl:gap-6">
+        <a href="reservar.html" class="border border-white px-4 py-2.5 text-xs uppercase tracking-widest transition-colors hover:border-[#e5c89c] hover:text-[#e5c89c] lg:px-6 lg:py-3" data-idiomas="menu.reservar">Reservar</a>
+
+        <div class="seletor-idioma relative">
+          <button type="button" id="botao-idioma" aria-label="Escolher idioma" aria-expanded="false" class="flex size-9 items-center justify-center rounded-full border border-white transition-colors hover:bg-white/15"><span class="icone icone-globo"></span></button>
+          <div id="opcoes-idioma" class="absolute right-0 top-full z-20 mt-2 hidden min-w-40 bg-white p-1.5 text-sm text-[#14245d] shadow-lg [&.aberto]:block">
+            <button type="button" data-idioma="pt" class="w-full px-3 py-2.5 text-left hover:bg-[#f4f1eb]">🇵🇹 Português</button>
+            <button type="button" data-idioma="en" class="w-full px-3 py-2.5 text-left hover:bg-[#f4f1eb]">🇬🇧 English</button>
+          </div>
+        </div>
+
+        <!-- Botão do menu -->
+        <button type="button" id="menu-botao" aria-expanded="false" aria-controls="menu-principal" aria-label="Menu" class="flex size-9 items-center justify-center text-xl lg:hidden">
+          <span id="menu-icone" aria-hidden="true" class="icone icone-menu size-6"></span>
+        </button>
+      </div>
+
+      <div id="menu-principal" class="hidden fixed inset-0 -z-10 flex-col justify-center gap-2 bg-[#14245d] px-8 text-lg uppercase tracking-widest lg:static lg:z-auto lg:flex lg:w-auto lg:flex-row lg:gap-5 min-[1100px]:gap-8 xl:gap-12 lg:bg-transparent lg:p-0 lg:text-[13px]">
+        <a href="index.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.inicio">Início</a>
+        <a href="alojamentos.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.alojamentos">Alojamentos</a>
+        <a href="experiencia.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.experiencia">A Experiência</a>
+        <a href="nazare.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.nazare">Nazaré</a>
+        <a href="avaliacoes.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.avaliacoes">Avaliações</a> <a href="contactos.html" class="py-2 transition-colors hover:text-[#e5c89c] lg:py-0" data-idiomas="menu.contactos">Contactos</a>
+      </div>
+    </nav>
+  </header>
+
+      <main>
+    <!-- Topo da página -->
+    <section class="relative h-[75vh] min-h-[480px] bg-[url('/imagens/alojamentos/espacos_comuns_millennium/4.jpeg')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute bottom-[12%] left-6 right-6 text-white md:left-[10%]">
+        <p class="mb-5 text-xs tracking-[0.3em]" data-idiomas="cont.kicker">APARTAMENTOS 7 SAIAS</p>
+        <h1 class="mb-5 font-['Georgia',serif] text-5xl leading-none md:text-7xl" data-idiomas="cont.titulo">Contactos</h1>
+        <p class="max-w-xl text-base leading-relaxed md:text-lg" data-idiomas="cont.sub">Estamos disponíveis para ajudar a planear a sua estadia.</p>
+      </div>
+    </section>
+
+    <!-- Como falar connosco -->
+    <section class="px-6 py-20 md:px-[8%] md:py-28">
+      <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">FALE CONNOSCO</p>
+      <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl" data-idiomas="cont.info_titulo">Como falar connosco</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <a href="tel:+351965214539" class="group flex flex-col gap-4 rounded-3xl border border-[#e8e1d7] bg-white p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="icone icone-telefone size-8 text-[#1d2d78]"></span>
+          <p class="text-xs uppercase tracking-[0.2em] text-[#666]" data-idiomas="cont.telefone">Telefone</p>
+          <p class="font-['Georgia',serif] text-xl leading-snug text-[#14245d]">+351 965 214 539</p>
+          <span class="mt-auto w-fit border-b border-[#1d2d78] pb-1 text-xs tracking-[0.2em] text-[#1d2d78] transition-colors group-hover:border-[#b49468] group-hover:text-[#b49468]">LIGAR</span>
+        </a>
+        <a href="mailto:apartamentos7saias@gmail.com" class="group flex flex-col gap-4 rounded-3xl border border-[#e8e1d7] bg-white p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="icone icone-email size-8 text-[#1d2d78]"></span>
+          <p class="text-xs uppercase tracking-[0.2em] text-[#666]" data-idiomas="cont.email">E-mail</p>
+          <p class="font-['Georgia',serif] text-xl leading-snug text-[#14245d] break-all">apartamentos7saias@gmail.com</p>
+          <span class="mt-auto w-fit border-b border-[#1d2d78] pb-1 text-xs tracking-[0.2em] text-[#1d2d78] transition-colors group-hover:border-[#b49468] group-hover:text-[#b49468]">ENVIAR E-MAIL</span>
+        </a>
+        <a href="https://maps.app.goo.gl/cqWHq9idam2neeZF9" target="_blank" rel="noopener" class="group flex flex-col gap-4 rounded-3xl border border-[#e8e1d7] bg-white p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="icone icone-morada size-8 text-[#1d2d78]"></span>
+          <p class="text-xs uppercase tracking-[0.2em] text-[#666]">Receção</p>
+          <p class="font-['Georgia',serif] text-xl leading-snug text-[#14245d]">Edifício Alimentícia<br>Av. do Município 4, 2450-108 Nazaré</p>
+          <span class="mt-auto w-fit border-b border-[#1d2d78] pb-1 text-xs tracking-[0.2em] text-[#1d2d78] transition-colors group-hover:border-[#b49468] group-hover:text-[#b49468]">VER NO MAPA</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Receção -->
+    <section class="grid gap-10 border-t border-[#ded8ce] px-6 py-20 md:grid-cols-[1fr_1.4fr] md:gap-x-16 md:gap-y-8 md:px-[8%] md:py-28">
+      <div>
+        <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">ONDE NOS ENCONTRA</p>
+        <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl">A nossa receção.</h2>
+        <p class="mb-4 text-[17px] leading-loose text-[#666]">A nossa receção fica no <strong class="font-semibold text-[#14245d]">Edifício Alimentícia</strong>, por trás do Centro Cultural da Nazaré, na Avenida do Município. É aqui que faz o check-in e o check-out, os pagamentos e a troca de toalhas.</p>
+        <p class="mb-8 text-[17px] leading-loose text-[#666]">Se vier de autocarro, a rodoviária da Nazaré fica a menos de 5 minutos a pé, na mesma avenida.</p>
+        <dl class="mb-8 grid grid-cols-2 gap-6 border-y border-[#ded8ce] py-6">
+          <div>
+            <dt class="mb-1 text-xs uppercase tracking-[0.2em] text-[#b49468]">Época alta</dt>
+            <dd class="font-['Georgia',serif] text-2xl text-[#14245d]">10h – 20h</dd>
+          </div>
+          <div>
+            <dt class="mb-1 text-xs uppercase tracking-[0.2em] text-[#b49468]">Época baixa</dt>
+            <dd class="font-['Georgia',serif] text-2xl text-[#14245d]">10h – 19h</dd>
+          </div>
+        </dl>
+        <p class="leading-relaxed text-[#666]">Vai chegar depois do horário da receção? Avise-nos antes para combinarmos o check-in.</p>
+      </div>
+      <div class="flex flex-col">
+        <iframe
+          title="Mapa da receção dos Apartamentos 7 Saias"
+          loading="lazy"
+          src="https://www.google.com/maps?q=Apartamentos+7+Saias+Marginal,+Av.+do+Munic%C3%ADpio+4,+2450-108+Nazar%C3%A9&amp;z=17&amp;output=embed"
+          class="h-80 w-full grow rounded-3xl border border-[#e8e1d7]">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Perguntas frequentes -->
+    <section class="grid gap-10 border-t border-[#ded8ce] px-6 py-20 md:grid-cols-[1fr_1.4fr] md:gap-16 md:px-[8%] md:py-28">
+      <div>
+        <p class="mb-6 text-xs tracking-[0.25em] text-[#1d2d78]">PERGUNTAS FREQUENTES</p>
+        <h2 class="mb-8 font-['Georgia',serif] text-4xl leading-tight text-[#14245d] lg:text-5xl">Antes de reservar.</h2>
+        <p class="text-[17px] leading-loose text-[#666]">Não encontra a resposta? Ligue-nos ou envie um e-mail.</p>
+      </div>
+      <div class="border-t border-[#ded8ce]">
+        <details class="group border-b border-[#ded8ce] py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-['Georgia',serif] text-xl text-[#14245d] [&::-webkit-details-marker]:hidden">
+            Como faço uma reserva?
+            <span class="icone icone-mais size-6 text-[#b49468] transition-transform group-open:rotate-45"></span>
+          </summary>
+          <p class="mt-4 max-w-2xl leading-relaxed text-[#666]">Escolha as datas e o número de pessoas na página Reservar. Aparecem os alojamentos livres e o preço total; depois é só preencher os seus dados.</p>
+        </details>
+        <details class="group border-b border-[#ded8ce] py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-['Georgia',serif] text-xl text-[#14245d] [&::-webkit-details-marker]:hidden">
+            Como sei que a reserva ficou confirmada?
+            <span class="icone icone-mais size-6 text-[#b49468] transition-transform group-open:rotate-45"></span>
+          </summary>
+          <p class="mt-4 max-w-2xl leading-relaxed text-[#666]">No fim da reserva aparece a confirmação no ecrã e recebe um e-mail com todos os dados da estadia. Guarde esse e-mail para qualquer contacto connosco.</p>
+        </details>
+        <details class="group border-b border-[#ded8ce] py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-['Georgia',serif] text-xl text-[#14245d] [&::-webkit-details-marker]:hidden">
+            Posso alterar ou cancelar a reserva?
+            <span class="icone icone-mais size-6 text-[#b49468] transition-transform group-open:rotate-45"></span>
+          </summary>
+          <p class="mt-4 max-w-2xl leading-relaxed text-[#666]">Contacte-nos por telefone ou e-mail com a referência da reserva. Pode cancelar sem custos até 7 dias antes da chegada.</p>
+        </details>
+        <details class="group border-b border-[#ded8ce] py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-['Georgia',serif] text-xl text-[#14245d] [&::-webkit-details-marker]:hidden">
+            Os preços são iguais todo o ano?
+            <span class="icone icone-mais size-6 text-[#b49468] transition-transform group-open:rotate-45"></span>
+          </summary>
+          <p class="mt-4 max-w-2xl leading-relaxed text-[#666]">Não. O preço por noite muda com a época: baixa, média e alta (verão). O total aparece sempre antes de confirmar.</p>
+        </details>
+        <details class="group border-b border-[#ded8ce] py-6">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-['Georgia',serif] text-xl text-[#14245d] [&::-webkit-details-marker]:hidden">
+            Quantas pessoas podem ficar num alojamento?
+            <span class="icone icone-mais size-6 text-[#b49468] transition-transform group-open:rotate-45"></span>
+          </summary>
+          <p class="mt-4 max-w-2xl leading-relaxed text-[#666]">Depende do alojamento: dos quartos para 2 pessoas até ao T4, que recebe até 8 hóspedes. Pode filtrar pelo número de pessoas na pesquisa.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Reservar -->
+    <section class="flex flex-col items-center bg-[#1d2d78] px-6 py-20 text-center text-white md:py-28">
+      <p class="mb-6 text-xs tracking-[0.25em]">APARTAMENTOS 7 SAIAS</p>
+      <h2 class="mb-8 max-w-3xl font-['Georgia',serif] text-4xl leading-snug lg:text-6xl lg:leading-tight">Pronto para reservar?</h2>
+      <a href="reservar.html" class="border border-white px-9 py-4 text-xs tracking-[0.2em] transition-colors hover:border-[#e5c89c] hover:text-[#e5c89c]" data-idiomas="cont.cta">FAZER UMA RESERVA</a>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="grid justify-items-center gap-6 px-6 pb-5 pt-10 text-center text-sm text-[#14245d] md:grid-cols-[1fr_1.5fr_1fr] md:items-start md:justify-items-start md:px-[8%] md:text-left">
+    <img src="/imagens/geral/logo_azul.png" alt="Apartamentos 7 Saias" class="w-24">
+
+    <div class="flex flex-col items-center gap-1.5 md:items-start">
+      <h3 class="mb-2 text-xs font-semibold uppercase tracking-widest">Onde estamos</h3>
+      <p>Avenida do Município, n.º 4</p>
+      <p>2450 Nazaré, Portugal</p>
+      <a href="tel:+351965214539" class="mt-1 hover:text-[#b49468]">+351 965 214 539</a>
+      <a href="mailto:apartamentos7saias@gmail.com" class="break-all hover:text-[#b49468]">apartamentos7saias@gmail.com</a>
+    </div>
+
+    <div class="grid grid-cols-2 justify-items-center gap-x-10 gap-y-2 md:justify-items-start">
+      <h3 class="col-span-2 mb-2 text-xs font-semibold uppercase tracking-widest">Explorar</h3>
+      <a href="index.html" class="hover:text-[#b49468]" data-idiomas="menu.inicio">Início</a>
+      <a href="alojamentos.html" class="hover:text-[#b49468]" data-idiomas="menu.alojamentos">Alojamentos</a>
+      <a href="index.html#experiencia" class="hover:text-[#b49468]">Experiência</a>
+      <a href="avaliacoes.html" class="hover:text-[#b49468]" data-idiomas="menu.avaliacoes">Avaliações</a> <a href="contactos.html" class="hover:text-[#b49468]" data-idiomas="menu.contactos">Contactos</a>
+      <a href="reservar.html" class="hover:text-[#b49468]" data-idiomas="menu.reservar">Reservar</a>
+    </div>
+
+    <div class="flex w-full flex-col items-center gap-2.5 border-t border-[#ded8ce] pt-4 text-xs md:col-span-full md:flex-row md:justify-between">
+      <p>© 2026 Apartamentos 7 Saias · Licença n.º 50668 · <a href="admin.html" class="opacity-50 hover:opacity-100">Área reservada</a></p>
+      <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-[#b49468]">Livro de Reclamações</a>
+    </div>
+  </footer>
+
+</body>
+</html>
