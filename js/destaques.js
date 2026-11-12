@@ -13,7 +13,7 @@
   });
 
   function desenhar() {
-    // Sem dados (site aberto sem servidor): ficam os cartões fixos
+    // Sem dados: ficam os cartões fixos
     if (alojamentos.length === 0) return;
 
     grelha.replaceChildren();

@@ -12,7 +12,7 @@
   let falhou = false;
   let filtro = new URLSearchParams(location.search).get("tipo") || "todos";
   
-  // Cartões fixos do HTML (para quando o site abre sem servidor)
+  // Cartões fixos do HTML
   const cartoesFixos = [...grelha.children];
 
   // Coração dos favoritos nos cartões fixos
@@ -63,8 +63,7 @@
       botao.setAttribute("aria-pressed", ativo ? "true" : "false");
     });
 
-    // Sem servidor: fica o cartão fixo do HTML
-    // Sem servidor: usa os cartões fixos do HTML; com servidor: os da base de dados
+    // Sem servidor: cartões fixos; com servidor: base de dados
     const semServidor = falhou || !carregado;
     const lista = semServidor
       ? cartoesFixos.map((cartao) => ({ id: Number(cartao.dataset.id), tipologia: cartao.dataset.tipologia, cartao }))
