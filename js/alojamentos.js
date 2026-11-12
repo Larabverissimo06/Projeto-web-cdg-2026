@@ -20,7 +20,7 @@
     cartao.innerHTML = `
       <div class="h-64 overflow-hidden md:h-72">
         <img
-          src="/imagens/alojamentos/espacos_comuns_millennium/4.jpeg"
+          src="imagens/alojamentos/espacos_comuns_millennium/4.jpeg"
           alt="Terraço dos Espaços Comuns do Millennium"
           loading="lazy"
           class="size-full object-cover transition duration-500 group-hover:scale-105"
