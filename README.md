@@ -22,7 +22,7 @@ O website permite conhecer os alojamentos, a vila e a forma de funcionamento da 
 Para esta entrega, as páginas a avaliar são:
 
 - **Início** (`index.html`)
-- **Alojamentos** (`alojamentos.html`)
+- **A Experiência** (`experiencia.html`)
 - **Nazaré** (`nazare.html`)
 
 As restantes páginas também estão completas e fazem parte do projeto.
