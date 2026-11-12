@@ -82,19 +82,19 @@ Foi testado a 360, 768, 1024 e 1440 píxeis de largura.
 
 ## Esquemas
 
-Os esquemas da Entrega 1 foram feitos no [draw.io](https://app.diagrams.net) e estão na pasta [`docs/esquemas/`](docs/esquemas/).
+Os esquemas da Entrega 1 foram feitos no [draw.io](https://app.diagrams.net) e estão na pasta [`esquemas/`](esquemas/).
 
 ### Página inicial · Mobile
-![Página inicial em telemóvel](docs/esquemas/esquema-pagina-inicial-mobile.drawio.png)
+![Página inicial em telemóvel](esquemas/esquema-pagina-inicial-mobile.drawio.png)
 
 ### Página inicial · Desktop
-![Página inicial em computador](docs/esquemas/esquema-pagina-inicial-desktop.drawio.png)
+![Página inicial em computador](esquemas/esquema-pagina-inicial-desktop.drawio.png)
 
 ### Alojamentos · Mobile
-![Alojamentos em telemóvel](docs/esquemas/esquema-pagina-alojamentos-mobile.drawio.png)
+![Alojamentos em telemóvel](esquemas/esquema-pagina-alojamentos-mobile.drawio.png)
 
 ### Alojamentos · Desktop
-![Alojamentos em computador](docs/esquemas/esquema-pagina-alojamentos-desktop.drawio.png)
+![Alojamentos em computador](esquemas/esquema-pagina-alojamentos-desktop.drawio.png)
 
 ## Código
 
@@ -119,9 +119,6 @@ php -S localhost:8000
 
 Depois abrir http://localhost:8000 no browser.
 
-### E-mails
-
-Os dados da conta Gmail não estão no repositório. Para os e-mails funcionarem, copiar `api/email-config.exemplo.php` para `api/email-config.php` e preencher com o e-mail e uma palavra-passe de aplicação. Sem esse ficheiro, as reservas funcionam na mesma, só não é enviado o e-mail.
 
 ### Organização das pastas
 
