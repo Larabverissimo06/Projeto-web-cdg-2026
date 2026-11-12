@@ -60,7 +60,9 @@
 
       mostrar(0);
     })
+    // Sem servidor: mostra a mensagem de quando ainda não há avaliações
     .catch(() => {
-      total.textContent = "Não foi possível carregar as avaliações.";
+      document.getElementById("resumo").remove();
+      document.getElementById("sem-avaliacoes").hidden = false;
     });
 })();

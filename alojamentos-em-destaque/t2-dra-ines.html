@@ -9,6 +9,7 @@
   <script src="../js/idiomas.js" defer></script>
   <script src="../js/comum.js" defer></script>
   <script src="../js/menu.js" defer></script>
+  <script src="../js/avaliar.js" defer></script>
 </head>
 <body class="bg-[#f4f1eb] font-['Arial',sans-serif] text-[#222]">
 
@@ -157,6 +158,31 @@
           <span>Av. do Município 1, 2450-106 Nazaré</span>
         </p>
         <a href="https://maps.app.goo.gl/HES5gMNgZXyKHzYz8" target="_blank" rel="noopener" class="w-fit items-center gap-1.5 border-b border-[#14245d] pb-1 text-sm text-[#14245d] hover:text-[#b49468] hover:border-[#b49468] [&:not([hidden])]:inline-flex">Abrir no Google Maps <span class="icone icone-externo size-4"></span></a>
+      </div>
+
+      <!-- Avaliação da estadia -->
+      <div class="mt-9 border-t border-[#d8d6d0] pt-7">
+        <h2 class="mb-5 font-['Georgia',serif] text-3xl leading-tight text-[#14245d] lg:text-4xl">Avalie a sua estadia</h2>
+        <p class="mb-3 leading-relaxed text-[#687583]">A sua opinião é importante para nós. Partilhe a sua experiência nos Apartamentos 7 Saias.</p>
+
+        <form id="form-avaliacao" data-alojamento="70" class="max-w-2xl">
+          <!-- Estrelas: radios por ordem inversa; peer-has-[:checked] pinta também as estrelas à esquerda da escolhida -->
+          <div class="my-4 flex flex-row-reverse justify-end gap-1" role="radiogroup" aria-label="Classificação da estadia">
+            <label class="peer cursor-pointer text-[#d8d6d0] transition hover:scale-110 has-[:checked]:text-[#14245d] peer-has-[:checked]:text-[#14245d]"><input type="radio" name="classificacao" value="5" required class="sr-only"><span class="icone icone-estrela-cheia size-8"></span><span class="sr-only">5 estrelas</span></label>
+            <label class="peer cursor-pointer text-[#d8d6d0] transition hover:scale-110 has-[:checked]:text-[#14245d] peer-has-[:checked]:text-[#14245d]"><input type="radio" name="classificacao" value="4" class="sr-only"><span class="icone icone-estrela-cheia size-8"></span><span class="sr-only">4 estrelas</span></label>
+            <label class="peer cursor-pointer text-[#d8d6d0] transition hover:scale-110 has-[:checked]:text-[#14245d] peer-has-[:checked]:text-[#14245d]"><input type="radio" name="classificacao" value="3" class="sr-only"><span class="icone icone-estrela-cheia size-8"></span><span class="sr-only">3 estrelas</span></label>
+            <label class="peer cursor-pointer text-[#d8d6d0] transition hover:scale-110 has-[:checked]:text-[#14245d] peer-has-[:checked]:text-[#14245d]"><input type="radio" name="classificacao" value="2" class="sr-only"><span class="icone icone-estrela-cheia size-8"></span><span class="sr-only">2 estrelas</span></label>
+            <label class="peer cursor-pointer text-[#d8d6d0] transition hover:scale-110 has-[:checked]:text-[#14245d] peer-has-[:checked]:text-[#14245d]"><input type="radio" name="classificacao" value="1" class="sr-only"><span class="icone icone-estrela-cheia size-8"></span><span class="sr-only">1 estrela</span></label>
+          </div>
+
+          <input type="text" id="nome-avaliacao" name="nome" minlength="2" maxlength="60" placeholder="O seu nome" required class="mb-3 block w-full rounded-md border border-[#d8d6d0] bg-[#faf9f6] px-3.5 py-3 text-[15px] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#14245d] [&:user-valid]:border-[#2f7a46] [&:user-invalid]:border-[#b42318]">
+
+          <textarea id="comentario-avaliacao" name="comentario" rows="4" maxlength="1000" placeholder="Conte-nos como foi a sua estadia..." class="block w-full resize-y rounded-md border border-[#d8d6d0] bg-[#faf9f6] px-3.5 py-3 text-[15px] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[#14245d]"></textarea>
+
+          <p id="mensagem-avaliacao" class="mt-3 text-sm" role="status" hidden></p>
+
+          <button type="submit" class="mt-3 rounded-md bg-[#14245d] px-5 py-3 text-sm text-white transition-colors hover:bg-[#e5c89c] hover:text-[#14245d]">Enviar avaliação</button>
+        </form>
       </div>
 
       <!-- Disponibilidade -->

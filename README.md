@@ -71,7 +71,7 @@ Administração (admin.html) ..... área reservada, acessível pelo rodapé
 
 ## Responsividade
 
-O site foi feito a partir do telemóvel (*mobile first*) e adapta-se com os pontos de quebra do Tailwind (`sm`, `md`, `lg` e `xl`). Alguns exemplos:
+O site foi feito a partir do telemóvel (*mobile first*) e adapta-se com os pontos de quebra do Tailwind (`sm`, `md`, `lg`, `xl` e `2xl`). Alguns exemplos:
 
 - Conteúdo num contentor centrado com largura máxima (`mx-auto max-w-screen-2xl`) e margens que aumentam com o ecrã (`px-6 md:px-16 lg:px-20 xl:px-28`)
 - Grelhas de cartões com 1 coluna no telemóvel, 2 no tablet e 3 ou 4 no computador
@@ -137,7 +137,7 @@ projeto-web/
 ├── icones.css                       ícones (Iconify)
 ├── tailwind.css                     só para as sugestões do Tailwind no VS Code
 ├── reservas.db                      base de dados SQLite
-├── alojamentos-em-destaque/         páginas estáticas dos 3 alojamentos em destaque
+├── alojamentos-em-destaque/         páginas estáticas dos 3 alojamentos em destaque (com formulário de avaliação)
 ├── js/                              JavaScript de cada página
 ├── api/                             ficheiros PHP (base de dados, reservas, e-mails)
 ├── imagens/                         fotografias, logótipo e alojamentos
